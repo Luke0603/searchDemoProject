@@ -137,7 +137,7 @@ extension ResultListController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-        if indexPath.row == (viewModel!.photoArray.count - Int(self.viewModel!.searchNo)!) {
+        if indexPath.row == viewModel!.photoArray.count - 1{
             loadNextPage()
         }
     }

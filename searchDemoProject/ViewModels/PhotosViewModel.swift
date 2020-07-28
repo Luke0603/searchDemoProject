@@ -23,6 +23,8 @@ class PhotosViewModel: NSObject {
         searchText = word
         searchNo = no
         photoArray.removeAll()
+        pageNo = 1
+        totalPageNo = 1
         fetchResults(completion: completion)
     }
     
@@ -40,7 +42,7 @@ class PhotosViewModel: NSObject {
     private func fetchResults(completion: @escaping () -> Void) {
         
         guard let url = Webservice.shared.searchUrl(SearchKeyword: self.searchText, DisplayNo: self.searchNo, PageNo: String(self.pageNo)) else {
-            print("Failed to fetch flickr data!")
+            print("Failed to fetch data!!")
             return
         }
         

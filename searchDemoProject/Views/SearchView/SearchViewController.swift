@@ -22,10 +22,6 @@ class SearchViewController: UIViewController {
         setUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        viewModel = PhotosViewModel()
-    }
-    
     private func setUI() {
         
         self.view.backgroundColor = .white
