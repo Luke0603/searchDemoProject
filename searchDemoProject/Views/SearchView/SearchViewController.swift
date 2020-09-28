@@ -23,8 +23,6 @@ class SearchViewController: UIViewController {
     }
     
     private func setUI() {
-        
-        print("測試git")
         self.view.backgroundColor = .white
         self.title = "搜尋輸入頁"
         
